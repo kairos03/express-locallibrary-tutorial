@@ -11,7 +11,7 @@ var app = express();
 
 // Database setup
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://kairos:123456789@localhost/local_library';
+var mongoDB = require('./consts.js').MONGO_ENDPOINT;
 mongoose.connect(mongoDB);
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
